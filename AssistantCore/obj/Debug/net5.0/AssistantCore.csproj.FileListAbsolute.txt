@@ -1,0 +1,16 @@
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\AssistantCore.csproj.AssemblyReference.cache
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\AssistantCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\AssistantCore.AssemblyInfoInputs.cache
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\AssistantCore.AssemblyInfo.cs
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\AssistantCore.csproj.CoreCompileInputs.cache
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\bin\Debug\net5.0\AssistantCore.exe
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\bin\Debug\net5.0\AssistantCore.deps.json
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\bin\Debug\net5.0\AssistantCore.runtimeconfig.json
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\bin\Debug\net5.0\AssistantCore.runtimeconfig.dev.json
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\bin\Debug\net5.0\AssistantCore.dll
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\bin\Debug\net5.0\AssistantCore.pdb
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\AssistantCore.dll
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\ref\AssistantCore.dll
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\AssistantCore.pdb
+D:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\AssistantCore.genruntimeconfig.cache
+d:\OneDrive\.NET Framework projects\AssistantCore\AssistantCore\obj\Debug\net5.0\refint\AssistantCore.dll
