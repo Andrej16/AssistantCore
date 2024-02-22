@@ -13,3 +13,7 @@ D:\OneDrive\Projects\AssistantCore\AssistantCore\obj\Debug\net6.0\refint\Assista
 D:\OneDrive\Projects\AssistantCore\AssistantCore\obj\Debug\net6.0\AssistantCore.pdb
 D:\OneDrive\Projects\AssistantCore\AssistantCore\obj\Debug\net6.0\AssistantCore.genruntimeconfig.cache
 D:\OneDrive\Projects\AssistantCore\AssistantCore\obj\Debug\net6.0\ref\AssistantCore.dll
+D:\OneDrive\Projects\AssistantCore\AssistantCore\obj\Debug\net6.0\AssistantCore.sourcelink.json
+D:\OneDrive\Projects\AssistantCore\AssistantCore\bin\Debug\net6.0\Microsoft.Data.Sqlite.dll
+D:\OneDrive\Projects\AssistantCore\AssistantCore\bin\Debug\net6.0\SQLitePCLRaw.core.dll
+D:\OneDrive\Projects\AssistantCore\AssistantCore\obj\Debug\net6.0\AssistantCore.csproj.CopyComplete

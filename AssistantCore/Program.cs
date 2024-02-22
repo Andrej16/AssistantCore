@@ -1,6 +1,6 @@
 ﻿using AssistantCore.Algorithms;
 using AssistantCore.DataSources;
-using AssistantCore.EF;
+using AssistantCore.Serialization;
 using System;
 using System.Linq;
 
@@ -10,7 +10,7 @@ namespace AssistantCore
     {
         static void Main() 
         {
-            MainMethod("ids_parsing");
+            MainMethod("binary-serializing");
         }
 
         ///<param name="region">Takes in the --region option from the code fence options in markdown</param>
@@ -31,8 +31,9 @@ namespace AssistantCore
                 "divide-on-patches" => new Groupings().DivideOnPatches(Products.ProductList.Select(p => p.ProductName).ToList(), 3),
                 "parse-date-from-string" => new DateTimeTests().ParseStringDate(),
                 "ids_parsing" => new StringTests().ParseFromString("/1/2//3/4/"),
-                "sqlite-in-memory-test" => new SqliteInMemoryBloggingTest().TestConnection(),
                 //"where-indexed" => new Restrictions().IndexedWhere(),
+                "xml-serializing" => SerializeAnDeserialize.TestXmlSerialize(),
+                "binary-serializing" => SerializeAnDeserialize.TestBinarySerialize(),
 
                 //"custom-comparer" => session switch
                 //{
