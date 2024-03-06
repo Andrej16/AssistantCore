@@ -10,7 +10,7 @@ namespace AssistantCore
     {
         static void Main() 
         {
-            MainMethod("binary-serializing");
+            MainMethod("GameOfLife");
         }
 
         ///<param name="region">Takes in the --region option from the code fence options in markdown</param>
@@ -34,6 +34,7 @@ namespace AssistantCore
                 //"where-indexed" => new Restrictions().IndexedWhere(),
                 "xml-serializing" => SerializeAnDeserialize.TestXmlSerialize(),
                 "binary-serializing" => SerializeAnDeserialize.TestBinarySerialize(),
+                "GameOfLife" => GameOfLife.Print(),
 
                 //"custom-comparer" => session switch
                 //{
