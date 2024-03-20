@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AssistantCore
+namespace AssistantCore.Utils
 {
     public class AnagramEqualityComparer : IEqualityComparer<string>
     {
@@ -12,7 +12,7 @@ namespace AssistantCore
         private string getCanonicalString(string word)
         {
             char[] wordChars = word.ToCharArray();
-            Array.Sort<char>(wordChars);
+            Array.Sort(wordChars);
             return new string(wordChars);
         }
     }
