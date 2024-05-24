@@ -10,7 +10,7 @@ namespace AssistantCore
     {
         static void Main() 
         {
-            MainMethod(nameof(GameOfLife));
+            MainMethod(nameof(CellularAutomaton));
         }
 
         ///<param name="region">Takes in the --region option from the code fence options in markdown</param>
@@ -35,6 +35,7 @@ namespace AssistantCore
                 "binary-serializing" => SerializeAnDeserialize.TestBinarySerialize(),
                 nameof(GameOfLife) => GameOfLife.Print(),
                 nameof(SaluteAutomaton) => SaluteAutomaton.Print(),
+                nameof(CellularAutomaton) => CellularAutomaton.Print(),
 
                 //"custom-comparer" => session switch
                 //{
