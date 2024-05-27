@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AssistantCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+828a6feaf80d160934620c7dd3ec8db281134108")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8a17aca8a0bdc6278339b139ce7f78857bea075")]
 [assembly: System.Reflection.AssemblyProductAttribute("AssistantCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AssistantCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

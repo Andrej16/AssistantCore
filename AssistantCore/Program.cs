@@ -10,7 +10,7 @@ namespace AssistantCore
     {
         static void Main() 
         {
-            MainMethod(nameof(CellularAutomaton));
+            MainMethod(nameof(ParallelMaintainCollectionOrder));
         }
 
         ///<param name="region">Takes in the --region option from the code fence options in markdown</param>
@@ -36,6 +36,8 @@ namespace AssistantCore
                 nameof(GameOfLife) => GameOfLife.Print(),
                 nameof(SaluteAutomaton) => SaluteAutomaton.Print(),
                 nameof(CellularAutomaton) => CellularAutomaton.Print(),
+                nameof(ParallelMaintainCollectionOrder) => new ParallelMaintainCollectionOrder().MaintainWithOrder(),
+                //nameof(ParallelMaintainCollectionOrder) => new ParallelMaintainCollectionOrder().MaintainWithAsOrdered(),
 
                 //"custom-comparer" => session switch
                 //{
