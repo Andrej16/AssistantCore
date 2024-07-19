@@ -1,6 +1,7 @@
 ﻿using AssistantCore.Algorithms;
 using AssistantCore.DataSources;
 using AssistantCore.Serialization;
+using AssistantCore.Threading;
 using System;
 using System.Linq;
 
@@ -10,7 +11,7 @@ namespace AssistantCore
     {
         static void Main() 
         {
-            MainMethod(nameof(ParallelMaintainCollectionOrder));
+            MainMethod(nameof(AutoResetMode));
         }
 
         ///<param name="region">Takes in the --region option from the code fence options in markdown</param>
@@ -37,6 +38,7 @@ namespace AssistantCore
                 nameof(SaluteAutomaton) => SaluteAutomaton.Print(),
                 nameof(CellularAutomaton) => CellularAutomaton.Print(),
                 nameof(ParallelMaintainCollectionOrder) => new ParallelMaintainCollectionOrder().MaintainWithOrder(),
+                nameof(AutoResetMode) => AutoResetMode.Run(),
                 //nameof(ParallelMaintainCollectionOrder) => new ParallelMaintainCollectionOrder().MaintainWithAsOrdered(),
 
                 //"custom-comparer" => session switch
