@@ -11,7 +11,7 @@ namespace AssistantCore
     {
         static void Main() 
         {
-            MainMethod(nameof(AutoResetMode));
+            MainMethod(nameof(ManualResetMode));
         }
 
         ///<param name="region">Takes in the --region option from the code fence options in markdown</param>
@@ -39,6 +39,7 @@ namespace AssistantCore
                 nameof(CellularAutomaton) => CellularAutomaton.Print(),
                 nameof(ParallelMaintainCollectionOrder) => new ParallelMaintainCollectionOrder().MaintainWithOrder(),
                 nameof(AutoResetMode) => AutoResetMode.Run(),
+                nameof(ManualResetMode) => ManualResetMode.Run(),
                 //nameof(ParallelMaintainCollectionOrder) => new ParallelMaintainCollectionOrder().MaintainWithAsOrdered(),
 
                 //"custom-comparer" => session switch
