@@ -3,6 +3,7 @@
 using Azure.AI.OpenAI;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Collections.Generic;
 
 namespace AssistantCore.AI._02_azure_openai_api;
 
@@ -40,6 +41,12 @@ public class IntegrateAzureOpenAI
             "I will also share an interesting fact about the local nature on the hikes " +
             "when making a recommendation.";
 
+        // Initialize messages list
+        var messagesList = new List<ChatRequestMessage>()
+        {
+            new ChatRequestSystemMessage(systemMessage),
+        };
+
         do
         {
             Console.WriteLine("Enter your prompt text (or type 'quit' to exit): ");
@@ -70,11 +77,20 @@ public class IntegrateAzureOpenAI
                 DeploymentName = oaiDeploymentName
             };
 
+            // Add messages to the completion options
+            foreach (ChatRequestMessage chatMessage in messagesList)
+            {
+                chatCompletionsOptions.Messages.Add(chatMessage);
+            }
+
             // Send request to Azure OpenAI model
             ChatCompletions response = client.GetChatCompletions(chatCompletionsOptions);
 
             // Print the response
             string completion = response.Choices[0].Message.Content;
+
+            // Add generated text to messages list
+            messagesList.Add(new ChatRequestAssistantMessage(completion));
 
             Console.WriteLine("Response: " + completion + "\n");
         } while (true);
