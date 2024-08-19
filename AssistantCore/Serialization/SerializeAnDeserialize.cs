@@ -50,7 +50,9 @@ namespace AssistantCore.Serialization
 
             // Opens a file and serializes the object into it in binary format.
             Stream stream = File.Open("data.bin", FileMode.Create);
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
             BinaryFormatter formatter = new BinaryFormatter();
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
 
             formatter.Serialize(stream, obj);
             stream.Close();
@@ -60,7 +62,9 @@ namespace AssistantCore.Serialization
 
             // Opens file "data.xml" and deserializes the object from it.
             stream = File.Open("data.bin", FileMode.Open);
+#pragma warning disable SYSLIB0011 // Type or member is obsolete
             formatter = new BinaryFormatter();
+#pragma warning restore SYSLIB0011 // Type or member is obsolete
 
             obj = (ObjectForSerialization)formatter.Deserialize(stream);
             stream.Close();

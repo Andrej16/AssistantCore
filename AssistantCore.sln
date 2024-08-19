@@ -5,7 +5,13 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssistantCore", "AssistantCore\AssistantCore.csproj", "{87E29F4D-C0BD-4C4A-B4ED-EEC176247A5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowForms", "TurmiteAutomaton\WindowForms.csproj", "{AD55BD2B-AD6B-4A6C-A504-38B5D4B6C888}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowForms", "TurmiteAutomaton\WindowForms.csproj", "{AD55BD2B-AD6B-4A6C-A504-38B5D4B6C888}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63D9AE93-27FD-45BE-A82D-2115D225697A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

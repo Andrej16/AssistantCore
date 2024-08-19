@@ -11,7 +11,7 @@ namespace AssistantCore
     {
         static void Main() 
         {
-            MainMethod(nameof(ManualResetMode));
+            MainMethod("ai-examples", "azure-openai-api");
         }
 
         ///<param name="region">Takes in the --region option from the code fence options in markdown</param>
@@ -51,7 +51,15 @@ namespace AssistantCore
                 //    _ => MissingTag(session, false),
                 //},
 
+                "ai-examples" => session switch
+                {
+                    "azure-openai-api" => new AI._02_azure_openai_api.IntegrateAzureOpenAI().Run(),
+
+                    _ => MissingTag(session, false),
+                },
+
                 null => RunAll(),
+
                 _ => MissingTag(region),
             };
         }
