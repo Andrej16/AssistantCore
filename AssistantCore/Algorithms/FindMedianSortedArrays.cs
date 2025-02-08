@@ -76,26 +76,48 @@ public class FindMedianSortedArrays
         DisplayArray(union);
 
         //Remove duplicates
-        var duplicates = 0;
-        for (int i = 0; i < union.Length - 1; i++)
+        int duplicates = 0, count = 0;
+        for (int i = 0; i < union.Length - duplicates; i++)
         {
-            var current = union[i];
-            var next = union[i + 1];
-
-            if (current == next)
+            if (union[i] == union[i + 1])
             {
-                for (int shl = i; shl < union.Length - 1 - duplicates; shl++)
+                count = 0;
+                var ui = i;
+
+                while (union[i] == union[++ui])
+                    count++;
+
+                for (int shl = 1; shl < union.Length - count - i; shl++)
                 {
-                    union[shl] = union[shl + 1];
-                    union[shl + 1] = -1;
+                    union[i + shl] = union[i + shl + count];
                 }
 
-                duplicates++;
-            } 
+                duplicates += count;
+            }
         }
+
+        for (int d = union.Length - 1; d >= union.Length - duplicates; d--)
+            union[d] = 0;
 
         Console.WriteLine("Duplicates union:");
         DisplayArray(union);
+
+        //Median
+        Array.Resize(ref union, union.Length - duplicates);
+        Console.WriteLine("Resized array:");
+        DisplayArray(union);
+
+        float med = 0F;
+        if (union.Length % 2 == 0)
+        {
+            med = (float)(union[union.Length / 2 - 1] + union[union.Length / 2]) / 2;    
+        }
+        else
+        {
+            med = union[(union.Length - 1) / 2];
+        }
+
+        Console.WriteLine($"The Median of two arrays will be: {med}");
 
         return -1;
     }
