@@ -107,7 +107,7 @@ public class FindMedianSortedArrays
         Console.WriteLine("Resized array:");
         DisplayArray(union);
 
-        float med = 0F;
+        double med = 0;
         if (union.Length % 2 == 0)
         {
             med = (float)(union[union.Length / 2 - 1] + union[union.Length / 2]) / 2;    
