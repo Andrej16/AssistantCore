@@ -7,6 +7,10 @@ public class FindMedianSortedArrays
     public static int Run(int[] left, int[] right)
     {
         int[] union = new int[left.Length + right.Length];
+        int defaultValue = -1;
+        for (int i = 0; i < union.Length; i++)
+            union[i] = defaultValue;
+
         int k = 0, n = 0;
 
         //Sorting left array
@@ -52,7 +56,7 @@ public class FindMedianSortedArrays
         int u = 0;
         for (int r = 0; r < right.Length; r++)
         {
-            for (; u < left.Length + r; u++)
+            for (; u < union.Length; u++)
             {
                 if (right[r] < union[u])
                 {
@@ -62,6 +66,14 @@ public class FindMedianSortedArrays
                         union[su + 1] = union[su];
                     }
                     union[u] = right[r];
+
+                    break;
+                }
+                else if (union[u] == defaultValue)
+                {
+                    union[u] = right[r];
+
+                    u++;
 
                     break;
                 }
@@ -77,7 +89,7 @@ public class FindMedianSortedArrays
 
         //Remove duplicates
         int duplicates = 0, count = 0;
-        for (int i = 0; i < union.Length - duplicates; i++)
+        for (int i = 0; i < union.Length - duplicates - 1; i++)
         {
             if (union[i] == union[i + 1])
             {

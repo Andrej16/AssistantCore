@@ -12,7 +12,7 @@ namespace AssistantCore
         static void Main() 
         {
             //MainMethod("ai-examples", "azure-openai-api");
-            MainMethod(nameof(FindMedianSortedArrays));
+            MainMethod(nameof(FindMedianSortedArrays), "4");
         }
 
         ///<param name="region">Takes in the --region option from the code fence options in markdown</param>
@@ -41,7 +41,15 @@ namespace AssistantCore
                 nameof(ParallelMaintainCollectionOrder) => new ParallelMaintainCollectionOrder().MaintainWithOrder(),
                 nameof(AutoResetMode) => AutoResetMode.Run(),
                 nameof(ManualResetMode) => ManualResetMode.Run(),
-                nameof(FindMedianSortedArrays) => FindMedianSortedArrays.Run([1, 3], [2]),
+                nameof(FindMedianSortedArrays) => session switch
+                {
+                    "1" => FindMedianSortedArrays.Run([5, 9, 1, 3, 3], [4, 3, 5, 2]),
+                    "2" => FindMedianSortedArrays.Run([1, 3], [2]),
+                    "3" => FindMedianSortedArrays.Run([1, 2], [3, 4]),
+                    "4" => FindMedianSortedArrays.Run([0, 0], [0, 0]),
+                    _ => throw new InvalidOperationException()
+                },
+                
                 //nameof(ParallelMaintainCollectionOrder) => new ParallelMaintainCollectionOrder().MaintainWithAsOrdered(),
 
                 //"custom-comparer" => session switch
